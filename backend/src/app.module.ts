@@ -8,6 +8,8 @@ import { LogsModule } from './modules/logs/logs.module';
 import { ServersModule } from './modules/servers/servers.module';
 import { StatusPagesModule } from './modules/status-pages/status-pages.module';
 import { GatewayModule } from 'src/gateway/gateway.module'
+import { UsersModule } from 'src/modules/users/users.module'
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -50,8 +52,9 @@ import { GatewayModule } from 'src/gateway/gateway.module'
     LogsModule,
 
     ServersModule,
-
     StatusPagesModule,
+    UsersModule,
+    AuthModule
   ],
 })
 export class AppModule {}
