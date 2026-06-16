@@ -13,7 +13,7 @@ export const registerUser = async (dto: IRegisterDto) => {
     throw new ConflictException('Bu email allaqachon ro\'yxatdan o\'tgan')
   }
 
-  const hash = await bcrypt.hash(dto.password, 10)
+  const hash = await bcrypt.hash(dto.password, 8)
 
   const { rows } = await pool.query(
     `INSERT INTO users (email, password, full_name)
